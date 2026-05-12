@@ -38,7 +38,14 @@
     }
     header h1 { font-size: 2.2rem; color: var(--primary); margin-bottom: 8px; }
     header p { font-size: 1.1rem; color: #4a5568; }
-    .credit { font-size: 0.95rem; color: #718096; margin-top: 12px; border-top: 1px dashed var(--border); padding-top: 10px; }
+    .credit { 
+      font-size: 0.95rem; 
+      color: #718096; 
+      margin-top: 12px; 
+      padding-top: 10px; 
+      border-top: 1px dashed var(--border);
+    }
+    .date { font-size: 0.9rem; color: #a0aec0; margin-top: 6px; }
 
     main { max-width: 800px; margin: 0 auto; }
 
@@ -48,6 +55,16 @@
       padding: 25px;
       box-shadow: var(--shadow);
       margin-bottom: 24px;
+    }
+
+    .purpose-box {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+      font-size: 1rem;
+      color: #276749;
     }
 
     #intro { text-align: center; }
@@ -173,13 +190,37 @@
     }
     .btn-action:hover { background: #b7791f; }
 
+    .blog-card {
+      background: linear-gradient(135deg, #fff9db 0%, #fef3c7 100%);
+      border: 2px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px 0;
+      text-align: left;
+    }
+    .blog-card h3 { color: #92400e; margin-bottom: 8px; }
+    .blog-card a {
+      color: #b45309;
+      font-weight: 600;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .blog-card a:hover { text-decoration: underline; }
+
     footer {
       text-align: center;
       margin-top: 40px;
-      font-size: 0.9rem;
-      color: #718096;
+      font-size: 0.95rem;
+      color: #4a5568;
       padding-bottom: 20px;
+      line-height: 1.8;
     }
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover { text-decoration: underline; }
 
     @media (max-width: 600px) {
       body { font-size: 16px; padding: 12px; }
@@ -205,12 +246,17 @@
     Projeto 70+ ANABB — Associação Nacional dos Funcionários do Banco do Brasil<br>
     Ânimo Desenvolvimento Humano | Plenalongevidade.com.br
   </div>
+  <div class="date">Maio/2026</div>
 </header>
 
 <main>
   <section id="intro" class="card">
+    <div class="purpose-box">
+      <strong>Mais do que tirar nota boa</strong>, este teste é um espaço de autoconhecimento. 
+      Cada questão foi construída no sentido de promover uma longevidade mais <strong>ativa, positiva, combativa, afetiva e participativa</strong>.
+    </div>
     <p>Responda <strong>Sim</strong> ou <strong>Não</strong> para as 25 questões abaixo.<br>
-    Cada <strong>Sim vale 0,4 ponto</strong>. Ao final, descubra o quão vigorosa é a sua jornada!</p>
+    Ao final, descubra o quão vigorosa é a sua jornada e receba uma consultoria personalizada com práticas gratuitas para o seu dia a dia.</p>
     <button class="btn-action" onclick="startTest()">Começar Jornada 🌱</button>
   </section>
 
@@ -232,6 +278,13 @@
 
   <section id="result-box" class="card">
     <div id="resultContent"></div>
+    
+    <div class="blog-card">
+      <h3>📚 Quer aprofundar seu autoconhecimento?</h3>
+      <p>Acesse o blog do Psicólogo Ricardo de Faria Barros com mais de <strong>600 textos úteis</strong> para saúde mental, bem-estar e longevidade:</p>
+      <p><a href="https://bodecomfarinha.blogspot.com/" target="_blank">🔗 bodecomfarinha.blogspot.com</a></p>
+    </div>
+
     <div class="actions">
       <button class="btn-action" onclick="window.print()">🖨️ Salvar / Imprimir</button>
       <button class="btn-action" onclick="location.reload()">🔄 Refazer Teste</button>
@@ -240,7 +293,14 @@
 </main>
 
 <footer>
-  © 2026 Projeto 70+ ANABB | Desenvolvido para promover longevidade ativa, afetiva e combativa.
+  <strong>Contato:</strong><br>
+  <a href="mailto:ricardo@animodh.com.br">ricardo@animodh.com.br</a><br><br>
+  
+  <strong>Blog com +600 textos sobre saúde mental e longevidade:</strong><br>
+  <a href="https://bodecomfarinha.blogspot.com/" target="_blank">bodecomfarinha.blogspot.com</a><br><br>
+  
+  © 2026 Projeto 70+ ANABB | Psicólogo Ricardo de Faria Barros<br>
+  Ânimo Desenvolvimento Humano | Desenvolvido para promover longevidade ativa, afetiva e combativa.
 </footer>
 
 <script>
